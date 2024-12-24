@@ -1,0 +1,805 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.background-video-container {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden;
+}
+
+.background-video-container video {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Send the video to the background */
+}
+
+/* Content container */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the items horizontally */
+    justify-content: space-between; /* Distribute space evenly */
+    height: 80%; /* Take up 80% of the container's height */
+    color: #fff; /* White text for contrast */
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Styling for the main title */
+.h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Flex layout for the items */
+.heroine {
+    display: flex;
+    flex-direction: row; /* Arrange the items in a column */
+    gap: 2rem; /* Space between the elements */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Individual items in heroine */
+/* heroin buttons */
+.order{
+	width: 250px;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	color: #333;
+	background: #fff;
+	padding: 10px;
+	font-weight: bold;
+}
+.schedule{
+	width: 250px;
+	font-weight: bold;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	outline: none;
+	color: #fff;
+	background: transparent;
+	padding: 10px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        width: 90%;
+    }
+
+    .h1{
+        font-size: 2rem;
+    }
+
+}
+
+
+
+
+/* Footer */
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+    color: #f4b400;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .content {
+        width: 95%;
+    }
+
+    .heroine {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 1.5rem;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .background-video-container {
+        height: 80vh;
+    }
+
+    footer {
+        padding: 0.5rem 0;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+
+.secondSection{
+    width: 100%; /* Set the width of the div */
+    height: 100vh; /* Set the height of the div */
+    background-image: url('https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/price-solar-desktop'); /* Specify the background image */
+    background-size: cover; /* Make the image cover the entire div */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+    display: block;
+}
+.secondItem{
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+	max-width: 650px;
+	margin: auto;
+	margin-top: 40px;
+}
+.secondItem p{
+	font-size: 15px;
+	font-weight: 600;
+}
+.secondItem h1{
+	font-size: 30px;
+	font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .secondItem {
+        max-width: 90%;
+        margin-top: 20px;
+    }
+
+    .secondItem p {
+        font-size: 0.9rem;
+    }
+
+    .secondItem h1 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* third section */
+.thirdSection{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 70px 170px;
+    background: #000;
+    color: #fffffffa;
+}
+
+.thirdItem{
+    width: 290px;
+}
+.thirdItem h1{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.thirdItem p{
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* responsiveness  */
+ /* Responsive Design for Medium Screens (Tablets) */
+ @media (max-width: 768px) {
+    .thirdSection {
+      flex-direction: column; /* Stack items vertically */
+      padding: 50px 40px; /* Reduce padding */
+      align-items: center; /* Center align items */
+    }
+
+    .thirdItem {
+      width: 100%; /* Full width for items */
+      text-align: center; /* Center align text for better readability */
+      margin-bottom: 20px; /* Add spacing between items */
+    }
+
+    .thirdItem h1 {
+      font-size: 1.2rem; /* Slightly smaller font size */
+    }
+
+    .thirdItem p {
+      font-size: 12px; /* Slightly smaller font size */
+    }
+  }
+
+  /* Responsive Design for Small Screens (Mobile) */
+  @media (max-width: 480px) {
+    .thirdSection {
+      padding: 30px 20px; /* Minimize padding for small screens */
+    }
+
+    .thirdItem {
+      width: 100%;
+      text-align: center;
+    }
+
+    .thirdItem h1 {
+      font-size: 1rem; /* Smaller font size for mobile */
+    }
+
+    .thirdItem p {
+      font-size: 10px; /* Smaller text for better fit */
+    }
+  }
+/* fourthdiv */
+
+.cont {
+    position: absolute;
+    top: 23%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* White text for contrast */
+    text-align: left;
+    padding: 1rem;
+    width: 800px;
+    font-weight: bold;
+}
+.cont p{
+    font-size: 14px;
+
+}
+.cont h1{
+    font-size: 1.4rem;
+
+}
+
+
+.cont {
+    color: #fff;
+    text-align: left;
+    padding: 1rem;
+    width: 80%; /* Responsive width */
+    max-width: 800px; /* Maximum width */
+    font-weight: bold;
+}
+
+/* responsiveness */
+
+@media (max-width: 768px) {
+    .cont {
+        width: 90%;
+        margin-top: 20px; 
+        text-align: center;
+    }
+
+    .cont p {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .cont h1 {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
+
+
+/* fifthSection */
+
+.fifthItem {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8)
+}
+  
+.fifthDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #121212;
+    text-align: center;
+    padding: 100px;
+    color: #fff;
+    height: auto;
+}
+  
+.imageContainerr {
+    width: 100%;
+    max-width: 1100px; /* Set a max width to avoid too much stretching */
+    overflow: hidden; /* Prevent overflow */
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+  
+.imageContainerr img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image looks good */
+}
+  
+  
+.five {
+    display: flex; /* Use flexbox for side-by-side layout */
+    justify-content: space-between; /* Equal space between elements */
+    align-items: center; /* Align items vertically in the center */
+    gap: 20px; /* Optional spacing between elements */
+    text-align: left; /* Align text to the left */
+    max-width: 1100px;
+    margin-top: 20px;
+  }
+  
+.five h1 {
+    flex: 1; /* Distribute space equally */
+    margin: 0; /* Remove default margins */
+    text-align: left;
+    font-size: 1.4rem;
+}
+  
+.five p {
+    flex: 1; /* Distribute space equally */
+    margin: 0; /* Remove default margins */
+    line-height: 1.6; /* Improve readability */
+    text-align: left;
+    font-size: 14px;
+ }
+  /* responsiveness */
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .fifthDiv {
+        padding: 50px;
+    }
+
+    .five {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align items */
+        gap: 10px; /* Reduce gap between elements */
+    }
+
+    .five h1 {
+        font-size: 1.2rem; /* Adjust font size */
+        text-align: center; /* Center align text */
+    }
+
+    .five p {
+        font-size: 12px; /* Adjust font size */
+        text-align: center; /* Center align text */
+    }
+}
+
+@media (max-width: 480px) {
+    .fifthDiv {
+        padding: 20px;
+    }
+
+    .five {
+        gap: 5px; /* Further reduce gap between elements */
+    }
+
+    .five h1 {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .five p {
+        font-size: 10px; /* Adjust font size */
+    }
+}
+
+  /* seventhSection */
+  
+.seventhItem{
+    width: 100%; /* Set the width of the div */
+    height: 100vh; /* Set the height of the div */
+    background-image: url('https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/lights-stay-on-desktop'); /* Specify the background image */
+    background-size: cover; /* Make the image cover the entire div */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+.seventhDiv{
+    color: #fff;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    display: flex; 
+    justify-content: space-between; 
+    max-width: 1200px;
+    gap: 30px;
+    
+}
+.seventhDiv h1{
+    font-size: 1.6rem;
+    font-weight: bolder;
+    width: 600px;
+}
+.seventhDiv p{
+    text-align: left;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+/* 7th responsiveness */
+
+@media (max-width: 768px) {
+    .seventhItem {
+      height: 600px; /* Reduce height for medium screens */
+    }
+
+    .seventhDiv {
+      bottom: 8%;
+      left: 5%;
+      flex-direction: column; /* Stack content vertically */
+      align-items: flex-start; /* Align text to the left */
+      gap: 20px; /* Reduce gap for smaller screens */
+    }
+
+    .seventhDiv h1 {
+      font-size: 1.4rem; /* Reduce font size for heading */
+      width: 100%; /* Allow full width */
+    }
+
+    .seventhDiv p {
+      font-size: 12px; /* Smaller font size for paragraph */
+    }
+  }
+
+  /* Responsive Design for Small Screens (Mobile) */
+  @media (max-width: 480px) {
+    .seventhItem {
+      height: 400px; /* Reduce height further for small screens */
+    }
+
+    .seventhDiv {
+      bottom: 5%;
+      left: 5%;
+      gap: 15px; /* Reduce spacing further */
+    }
+
+    .seventhDiv h1 {
+      font-size: 1.2rem; /* Further reduce heading size */
+      width: 100%; /* Full-width heading */
+    }
+
+    .seventhDiv p {
+      font-size: 10px; /* Smaller text size */
+    }
+  }
+
+/* eightSection */
+.eigthSection {
+    background-color: black; /* Dark background for contrast */
+    color: #ffffff; /* Light text for readability */
+    padding: 40px 20px; /* Add spacing around the section */
+    text-align: center;
+  }
+  
+  .eigthItem {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Align content vertically */
+    flex-wrap: wrap; /* Ensure responsiveness */
+    
+  }
+  
+  .textContainer {
+    padding-left: 8rem;
+    max-width: 30%; /* Limit width to half */
+    text-align: left; /* Align text to the left */
+    color: #fff;
+  }
+
+  .textContainer h1 {
+    font-size: 1.7rem;
+    font-weight: bolder;
+  }
+  .textContainer p{
+    font-size: 14px;
+  }
+  
+  .imageContainer {
+    max-width: 70%; /* Limit width to half */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .imageContainer img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Prevent the image from becoming too large */
+    border-radius: 10px; /* Optional: Add rounded corners */
+  }
+  
+ /* 8 Responsive Design for Medium Screens (Tablets) */
+ @media (max-width: 768px) {
+    .eigthItem {
+      flex-direction: column; /* Stack text and image vertically */
+      text-align: center; /* Center-align content */
+    }
+
+    .textContainer {
+      padding-left: 0; /* Remove left padding for smaller screens */
+      max-width: 80%; /* Increase width to accommodate text */
+      margin-bottom: 20px; /* Add spacing below text */
+    }
+
+    .textContainer h1 {
+      font-size: 1.5rem; /* Slightly reduce heading size */
+    }
+
+    .textContainer p {
+      font-size: 13px; /* Reduce paragraph size */
+    }
+
+    .imageContainer {
+      max-width: 100%; /* Allow image to take full width */
+    }
+  }
+
+  /* Responsive Design for Small Screens (Mobile) */
+  @media (max-width: 480px) {
+    .eigthItem {
+      flex-direction: column; /* Stack text and image vertically */
+    }
+
+    .textContainer {
+      max-width: 100%; /* Full width for text */
+    }
+
+    .textContainer h1 {
+      font-size: 1.3rem; /* Smaller heading */
+    }
+
+    .textContainer p {
+      font-size: 12px; /* Smaller text size */
+    }
+
+    .imageContainer img {
+      max-width: 100%; /* Ensure the image fits the screen */
+    }
+  }
+
+  /* tenthItem */
+
+  .tenthItem{
+    width: 100%; /* Set the width of the div */
+    height: 100vh; /* Set the height of the div */
+    background-image: url('https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/powering-on-desktop'); /* Specify the background image */
+    background-size: cover; /* Make the image cover the entire div */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+.tenthDiv{
+    color: #fff;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    display: flex; 
+    justify-content: space-between; 
+    max-width: 1200px;
+    gap: 30px;
+    
+}
+.tenthDiv h1{
+    font-size: 1.6rem;
+    font-weight: bolder;
+    width: 600px;
+}
+.tenthDiv p{
+    text-align: left;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+    .tenthItem {
+      height: 600px; /* Adjust height for medium screens */
+    }
+
+    .tenthDiv {
+      bottom: 8%;
+      left: 5%;
+      gap: 20px; /* Reduce gap for smaller screens */
+    }
+
+    .tenthDiv h1 {
+      font-size: 1.4rem; /* Slightly smaller font size */
+      width: 100%; /* Allow heading to span the full width */
+    }
+
+    .tenthDiv p {
+      font-size: 12px; /* Slightly smaller text size */
+    }
+  }
+
+  /* Responsive Design for Small Screens (Mobile) */
+  @media (max-width: 480px) {
+    .tenthItem {
+      height: 400px; /* Adjust height for small screens */
+    }
+
+    .tenthDiv {
+      flex-direction: column; /* Stack content vertically */
+      align-items: flex-start; /* Align items to the left */
+      bottom: 5%; /* Adjust position for small screens */
+      left: 5%;
+      gap: 15px; /* Further reduce gap */
+    }
+
+    .tenthDiv h1 {
+      font-size: 1.2rem; /* Smaller font size */
+      width: 100%; /* Full-width heading */
+    }
+
+    .tenthDiv p {
+      font-size: 10px; /* Smaller font size for text */
+    }
+  }
+
+
+
+
+
+.eleventh{
+   background: #000;
+   color: #fff;
+   padding: 10rem;
+}
+.eleventh h1{
+    font-size: 20px;
+}
+.elevenflex {
+    border-bottom: 1px solid rgba(233, 231, 231, 0.1);;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px; /* Adjust the spacing between the grid items */
+    
+  }
+
+.elevenflex div {
+    text-align: left; /* Center align content (optional) */
+    padding: 6px; /* Optional: Adjust padding for the content */
+}
+.gray {
+    color: gray;
+    margin-bottom: 0;
+ }
+ .white{
+    margin-top: 0;
+ }
+.eleventh h1{
+    margin-top: 3rem;
+    margin-left: 5px;
+}
+
+/* responsiveness */
+
+/* Responsiveness for Medium Screens (1024px and below) */
+@media (max-width: 1024px) {
+    .eleventh {
+        padding: 5rem; /* Reduced padding for medium screens */
+    }
+
+    .eleventh h1 {
+        font-size: 18px; /* Adjust font size for medium screens */
+    }
+
+    .elevenflex {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+}
+
+/* Responsiveness for Small Screens (768px and below) */
+@media (max-width: 768px) {
+    .eleventh {
+        padding: 2rem; /* Reduced padding for small screens */
+    }
+
+    .eleventh h1 {
+        font-size: 16px; /* Smaller font size for small screens */
+        margin-top: 1rem; /* Adjust top margin for small screens */
+    }
+
+    .elevenflex {
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+    }
+
+    .elevenflex div {
+        text-align: center; /* Center align content for small screens */
+    }
+}
+
+/* Responsiveness for Extra Small Screens (480px and below) */
+@media (max-width: 480px) {
+    .eleventh {
+        padding: 1rem; /* Further reduced padding for extra small screens */
+    }
+
+    .eleventh h1 {
+        font-size: 14px; /* Further reduced font size for extra small screens */
+        margin-top: 0.5rem; /* Adjust top margin for extra small screens */
+    }
+
+    .elevenflex {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+        gap: 10px; /* Reduced gap between items */
+    }
+
+    .elevenflex div {
+        padding: 4px; /* Reduce padding for small devices */
+    }
+}
